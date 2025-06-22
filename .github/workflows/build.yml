@@ -10,7 +10,7 @@ jobs:
       - macos-latest
     steps:
       - name: Checkout to current repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Create output directory for built kexts
         run: mkdir -p Kexts
       - name: Clone AppleALC from source
@@ -64,7 +64,7 @@ jobs:
           done;
       - name: Upload to artifacts
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Artifacts
           path: Kexts/*
